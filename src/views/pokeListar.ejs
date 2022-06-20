@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/pokeListar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pokeListar.css" />
     <title>Pokelistar</title>
-</head>
-<body>
-   <div class="poke-flex">
-    <% for(let i=0; i < pokemon.length; i++){%>
-  <div class="ash">
-    <span><%= pokemon[i].name %></span>
-    <img class="poke-photo" src=" <%= pokemon[i].sprites.large%>" alt="">
-    <a href="/editar/<%=pokemon[i].national_number%>"><button class="button">Pokedex</button></a>  
-  </div>
-<% } %>
-   </div>
-</body>
+  </head>
+  <body>
+    <div class="poke-flex">
+      <% for(let i=0; i < pokemon.length; i++){%>
+      <div class="ash">
+        <span><%= pokemon[i].name %></span>
+        <img class="poke-photo" src=" <%= pokemon[i].sprites.large%>" alt="" />
+        <a href="/editar/<%=pokemon[i].national_number%>"
+          ><button class="button">Pokedex</button></a
+        >
+      </div>
+      <% } %>
+    </div>
+  </body>
 </html>

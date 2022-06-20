@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poke Detalle</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="css/pokeDetalle.css">
 </head>
+
 <body>
-<div class="poke-flex">
-    <div class="ash">
-        <p><%= pokemonDetail.name %></p>
-        <img src="<%= pokemonDetail.sprites.large %>" alt="">
-     </div>
-</div>
+    <div class="">
+        <img class="poke-photo" src="<%= pokemonDetail.sprites.normal %>" alt="">
+        <div class="rocket-power">
+            <p class="poke-name">
+                <%= pokemonDetail.name %>
+            </p>
+            <img src="img/International_Pokémon_logo.svg.webp" class="pokedex" alt="">
+            <div class="pokedex-div-main">
+                <div class="pokedex-div">
+                    <p>Type: <%=pokemonDetail.type%>
+                    </p>
+
+                    <h3>Stat Total:
+                        <%=pokemonDetail.total%>
+                    </h3>
+
+                    <ul>
+                        <li><span>HP:</span>
+                            <%=pokemonDetail.hp%>
+                        </li>
+                        <li><span>Attack:</span>
+                            <%=pokemonDetail.attack%>
+                        </li>
+                        <li><span>Defense:</span>
+                            <%=pokemonDetail.defense%>
+                        </li>
+                        <li><span>SP Atk:</span>
+                            <%=pokemonDetail.sp_atk%>
+                        </li>
+                        <li><span>SP Def:</span>
+                            <%=pokemonDetail.sp_def%>
+                        </li>
+                        <li><span>Speed:</span>
+                            <%=pokemonDetail.speed%>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+<a href="/"><button>Home</button></a>
+<form method="POST" action="/<%=pokemonDetail.national_number%>?_method=DELETE ">
+    <button type="submit">Eliminar</button></form>
+
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
